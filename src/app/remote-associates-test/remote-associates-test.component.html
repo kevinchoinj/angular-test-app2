@@ -1,0 +1,8 @@
+<h1>Remote Associates Test</h1>
+<p>Enter the word that is associated with the following three words:</p>
+<p>{{ word1 }} - {{ word2 }} - {{ word3 }}</p>
+<input type="text" [(ngModel)]="solution" (keyup.enter)="checkAnswer()">
+<div *ngIf="feedback">{{ feedback }}</div>
+<div *ngIf="currentProblem < problems.length">
+  <button (click)="nextProblem()">Next Problem</button>
+</div>
